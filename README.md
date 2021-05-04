@@ -39,6 +39,8 @@ docker build -t apiproxy:latest .
 
 Will create a docker image called `apiproxy:latest`.
 
+An existing docker contain can be found in docker hub as `systemmonkey42/apiproxy:latest`.
+
 #### Sample docker configuration
 
 The following is a simple docker-compose file which can launch the api proxy
@@ -49,7 +51,7 @@ version: '2.3'
 
 services:
   gitea_apiproxy:
-    image: apiproxy:latest
+    image: systemmonkey42/apiproxy:latest
     restart: always
     ports:
       - 9980:9980
