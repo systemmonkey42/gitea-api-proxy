@@ -7,31 +7,6 @@ let app = express();
 
 /**
  * @param {express.Request} req
- * @param {express.Response} res
- * @param {express.NextFunction} next
- */
-function logger(req, res, next) {
-    if (!req.complete) {
-        //console.log(req.method, req.query, req.params, req.headers, req.url);
-
-        /** @type {string[]} */
-        let body = [];
-
-        req.on('data', data => {
-            body.push(data.toString());
-        });
-
-        req.on('end', () => {
-            console.log(body);
-        });
-        res.statusCode = 503;
-        res.end();
-    }
-    next();
-}
-
-/**
- * @param {express.Request} req
  * @param {express.Response} _res
  * @param {express.NextFunction} next
  */
@@ -48,7 +23,6 @@ app.use(express.json());
 let api = express.Router();
 app.use(getAuth);
 app.use('/api/v3', api);
-app.use(logger);
 
 api.get('/user', async (_req, res, next) => {
     let data = await gitea.getUser();
