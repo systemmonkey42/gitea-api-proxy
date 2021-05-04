@@ -72,7 +72,7 @@ Edit the provided JSON configuration to provide the following details
 
 ```
 
-Once you submit the new code host definition, SourceGraph should immediately connect, download the list of repositories accessible by the provided API Key, and start cloning the,
+Once you submit the new code host definition, SourceGraph should immediately connect, download the list of repositories accessible by the provided API Key, and start cloning and indexing everything.
 
 
 [1]: https://github.com/sourcegraph/sourcegraph
