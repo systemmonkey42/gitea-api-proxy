@@ -1,0 +1,16 @@
+{
+	"arrowParens": "avoid",
+	"singleQuote": true,
+	"printWidth": 200,
+	"tabWidth": 4,
+	"useTabs": false,
+	"semi": true,
+	"endOfLine": "lf",
+	"arrayBracketSpacing": true,
+	"bracketSpacing": true,
+	"jsxBracketSameLine": true,
+	"offsetTernaryExpressions": true,
+	"alignObjectProperties": true,
+	"breakLongMethodChains": true,
+	"trailingComma": "es5"
+}
